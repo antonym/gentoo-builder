@@ -9,3 +9,6 @@ ADD gentoo.iso /root/gentoo.iso
 
 # Create output dir
 RUN mkdir /root/gentoo-images
+
+# Install needed packages
+RUN emerge app-arch/cpio
