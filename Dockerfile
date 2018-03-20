@@ -12,3 +12,4 @@ RUN mkdir /root/gentoo-images
 
 # Install needed packages
 RUN emerge app-arch/cpio
+RUN emerge app-arch/gzip
