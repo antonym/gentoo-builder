@@ -9,6 +9,3 @@ ADD gentoo.iso /root/gentoo.iso
 
 # Create output dir
 RUN mkdir /root/gentoo-images
-
-# Run script to craft PXE kernels for Gentoo
-RUN /root/pxe-craft-initrd-kernel /root/gentoo-images /root/gentoo.iso
