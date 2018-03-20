@@ -8,8 +8,8 @@ services:
 before_install:
   - wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20180318T214503Z/install-amd64-minimal-20180318T214503Z.iso -O gentoo.iso
   - docker build -t netbootxyz/gentoo .
-  - docker run --privileged netbootxyz/gentoo /bin/bash -c "/root/pxe-craft-initrd-kernel /root/gentoo-images /root/gentoo.iso"
-  - docker cp netbootxyz/gentoo:/root/gentoo-images .
+  - docker run --privileged netbootxyz/gentoo --name gentoo /bin/bash -c "/root/pxe-craft-initrd-kernel /root/gentoo-images /root/gentoo.iso"
+  - docker cp gentoo:/root/gentoo-images .
   - ls -la
   - ls -la gentoo-images
 
